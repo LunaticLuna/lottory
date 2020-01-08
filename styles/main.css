@@ -1,0 +1,228 @@
+html,
+body {
+  background-image: linear-gradient(to bottom,  #FF8800, #FFCC00);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*.content{
+  display:flex;
+  margin:auto;
+  justify-content: center;
+  flex-direction: column;
+}*/
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+.hide{
+  display:none;
+}
+.header{
+  /*font-family: 'Open Sans', sans-serif;*/
+  margin:0;
+  color:white;
+  font-size:48px;
+  font-weight: 900;
+  /*-webkit-text-stroke: 2px #a62626;*/
+}
+.select-num{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*width:100%;*/
+  /*height:100%;*/
+}
+.number-list {
+  /*border: 1px solid;*/
+  width: 83.33%;
+  max-width: 800px; 
+  min-height:450px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.card{
+  /*border: 1px solid rgba(0,0,0,.29);*/
+  background-color: #eeeeee;
+  margin-top:5px;
+  height:200px;
+  width:200px;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor:pointer;
+}
+.card:hover{
+  background-color: #ffffff;
+}
+.card:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.gradient-text{
+  font-size:120px;
+  font-weight: 900;
+  background: linear-gradient(to bottom, #FF8800, #FFCC00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*-webkit-text-stroke: 2px #a62626;*/
+}
+#n span{
+  font-size:50px;
+  font-weight: bold;
+}
+.lotto{
+  /*border: 1px solid;*/
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#machines{
+  /*border: 1px solid rgba(0,0,0,.29);*/
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 83.33%;
+  max-width: 760px; 
+  /*min-height:450px;*/
+
+}
+.slot-machine{
+  /*border: 1px solid rgba(0,0,0,.29);*/
+  margin:15px;
+  width:150px;
+  height:50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:#eeeeee;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 5px rgba(68,68,68,0.6);
+}
+#lotto-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:#C83C23;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+#lotto-btn:hover {background-color:  #FF4E20}
+
+#lotto-btn:active {
+  background-color: #FF4E20;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#congrats{
+  width: 83.33%;
+  max-width: 760px;
+  display:flex;
+  align-items: center;
+  justify-content: center; 
+}
+/* Position the Popup form */
+.login-popup {
+  position: relative;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.5); 
+  /*opacity: 0.6;*/
+/*  transition: all 0.5 linear;
+  -webkit-transition: same!
+  -moz-transition: same!
+  -o-transition: same!*/
+}
+
+/* Hide the Popup form */
+.form-popup {
+  display: none;
+  background-color: #fff;
+  opacity: 1;
+  position: fixed;
+  left: 50%;
+  top:30%;
+  transform: translate(-45%,5%);
+  border: 2px solid #666;
+  z-index: 9;
+}
+/* Styles for the form container */
+.form-container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Full-width for input fields */
+.form-container input{
+  font-size:30px;
+  width: 95%;
+  height:50px;
+  padding: 15px 5px;
+  margin: 10px 20px;
+  border: none;
+  background: #eee;
+}
+
+ /* Style submit/login button */
+ .btn {
+  background-color: #8ebf42;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  /*width: 50%;*/
+  width:150px;
+  margin:10px 0;
+  opacity: 0.8;
+}
+/* Style cancel button */
+.form-container .cancel {
+  background-color: #cc0000;
+}
+/* Hover effects for buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.popup-btns{
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+}

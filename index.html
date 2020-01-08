@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>抽奖</title>
+    <meta name="description" content="">
+    <script defer src="js/data.js" type="text/javascript"></script>
+    <script defer src="js/app.js" type="text/javascript"></script>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="styles\main.css">
+    <link rel="stylesheet" href="styles\popup.css">
+</head>
+<body>
+    <div class="container">
+      <div class = "select-num">
+        <h1 class = "header">选择中奖人数</h1>
+        <ul class = "number-list">
+          <li id = "1" class = "card"><span class = "gradient-text">1</span></li>
+          <li id = "2" class = "card"><span class = "gradient-text">2</span></li>
+          <li id = "4" class = "card"><span class = "gradient-text">4</span></li>
+          <li id = "6" class = "card"><span class = "gradient-text">6</span></li>
+          <li id = "10" class = "card"><span class = "gradient-text">10</span></li>
+          <li id = "n" class = "card"><span class = "gradient-text">自定义</span></li>
+        </ul>
+      </div>
+      <div class="login-popup hide">
+        <div class="form-popup" id="popupForm">
+          <form class="form-container">
+            <h2>输入中奖人数</h2>
+            <input type="number" id="custom-num" placeholder="中奖人数" name="custom-num" required>
+            <div class = "popup-btns">
+                <button type="button" class="btn" onclick = "handleCustomWinner()">确定</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">取消</button>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+      <div id = "lotto" class = "hide">
+        <button id = "lotto-btn">开始抽奖</button>
+        <ul id = "machines"></ul>
+        <div id = "congrats"></div>
+      </div>
+
+        
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Position the Popup form */
+.login-popup {
+  position: relative;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.5); 
+  /*opacity: 0.6;*/
+/*  transition: all 0.5 linear;
+  -webkit-transition: same!
+  -moz-transition: same!
+  -o-transition: same!*/
+}
+
+/* Hide the Popup form */
+.form-popup {
+  display: none;
+  background-color: #fff;
+  opacity: 1;
+  position: fixed;
+  left: 50%;
+  top:30%;
+  transform: translate(-45%,5%);
+  border: 2px solid #666;
+  z-index: 9;
+}
+/* Styles for the form container */
+.form-container {
+  width: 350px;
+  padding: 20px;
+  background-color: #fff;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Full-width for input fields */
+.form-container input{
+  text-align: center;
+  font-size:30px;
+  width: 80%;
+  height:50px;
+  padding: 15px 20px;
+  margin: 10px 20px;
+  border: none;
+  background: #eee;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+ /* Style submit/login button */
+ .btn {
+  background-color: #8ebf42;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  /*width: 50%;*/
+  width:150px;
+  margin:10px 0;
+  opacity: 0.8;
+}
+/* Style cancel button */
+.form-container .cancel {
+  background-color: #cc0000;
+}
+/* Hover effects for buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.popup-btns{
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+}
