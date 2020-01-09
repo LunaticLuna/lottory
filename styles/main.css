@@ -1,10 +1,11 @@
 html,
 body {
-  background-image: linear-gradient(to bottom,  #FF8800, #FFCC00);
+  /*background-image: linear-gradient(to bottom,  #FF8800, #FFCC00);*/
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #e7e3d4;
 }
 .container {
   height:100%;
@@ -26,6 +27,7 @@ ul {
 li {
   list-style-type: none;
   text-decoration: none;
+  margin:0;
 }
 .hide{
   display:none;
@@ -33,7 +35,7 @@ li {
 .header{
   /*font-family: 'Open Sans', sans-serif;*/
   margin:0;
-  color:white;
+  color:#2A3166;
   font-size:48px;
   font-weight: 900;
   /*-webkit-text-stroke: 2px #a62626;*/
@@ -59,7 +61,7 @@ li {
 }
 .card{
   /*border: 1px solid rgba(0,0,0,.29);*/
-  background-color: #eeeeee;
+  background-color: #b4dfe5;
   margin-top:5px;
   height:200px;
   width:200px;
@@ -71,17 +73,17 @@ li {
   cursor:pointer;
 }
 .card:hover{
-  background-color: #ffffff;
+  background-color: #d2fdff;
 }
 .card:active {
-  background-color: white;
+  background-color: #d2fdff;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .gradient-text{
   font-size:120px;
   font-weight: 900;
-  background: linear-gradient(to bottom, #FF8800, #FFCC00);
+  background: #2A3166;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /*-webkit-text-stroke: 2px #a62626;*/
@@ -92,6 +94,7 @@ li {
 }
 .lotto{
   /*border: 1px solid;*/
+  width:83.33%;
   height:100%;
   display: flex;
   justify-content: center;
@@ -106,15 +109,19 @@ li {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 83.33%;
-  max-width: 760px; 
+  /*max-width: 760px; */
   /*min-height:450px;*/
 
 }
 .slot-machine{
   /*border: 1px solid rgba(0,0,0,.29);*/
-  margin:15px;
-  width:150px;
-  height:50px;
+  /*margin:15px;*/
+  min-width:200px;
+  max-width:83.33%;
+  margin:0;
+  /*height:50px;*/
+  /*font-size:5vw;*/
+  padding: 15px 25px;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -126,6 +133,7 @@ li {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
+  width:146px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -151,78 +159,66 @@ li {
   align-items: center;
   justify-content: center; 
 }
-/* Position the Popup form */
-.login-popup {
-  position: relative;
-  text-align: center;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  background-color:rgba(0, 0, 0, 0.5); 
-  /*opacity: 0.6;*/
-/*  transition: all 0.5 linear;
-  -webkit-transition: same!
-  -moz-transition: same!
-  -o-transition: same!*/
-}
+.nav{
+  margin:0;
+  padding:5px 10px;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:40px;
+  display:flex;
+  justify-content: space-between;
 
-/* Hide the Popup form */
-.form-popup {
-  display: none;
-  background-color: #fff;
+}
+.nav-btn{
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color:#303c6c;
+  /*width:1 46px;*/
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #303c6c;
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  border-radius: 25px;
+}
+.nav-btn:disabled{
+  opacity: 0
+}
+.popup {
+  /*display: none;*/
+  background-color: #e7e3d4;
   opacity: 1;
+  width:500px;
+  height: 400px;
   position: fixed;
   left: 50%;
-  top:30%;
+  top:20%;
   transform: translate(-45%,5%);
   border: 2px solid #666;
   z-index: 9;
-}
-/* Styles for the form container */
-.form-container {
-  max-width: 400px;
-  padding: 20px;
-  background-color: #fff;
+  text-align:left;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
-/* Full-width for input fields */
-.form-container input{
-  font-size:30px;
-  width: 95%;
-  height:50px;
-  padding: 15px 5px;
-  margin: 10px 20px;
-  border: none;
-  background: #eee;
+.bold{
+  font-weight: bold;
 }
-
- /* Style submit/login button */
- .btn {
-  background-color: #8ebf42;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  /*width: 50%;*/
-  width:150px;
-  margin:10px 0;
-  opacity: 0.8;
+.text-container{
+  background-color: #fff;
+  border-radius: 20px;
+  margin:20px;
+  padding:5px;
+  /*width:500px;*/
+  height: 300px;
+  overflow: scroll;
 }
-/* Style cancel button */
-.form-container .cancel {
-  background-color: #cc0000;
-}
-/* Hover effects for buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-.popup-btns{
-  width:100%;
-  display:flex;
-  justify-content: space-around;
+.winner-pp-btns{
+  display: flex;
+  justify-content: space-between;
+  margin:20px;
 }

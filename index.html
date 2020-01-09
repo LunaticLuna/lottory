@@ -5,6 +5,7 @@
     <title>抽奖</title>
     <meta name="description" content="">
     <script defer src="js/data.js" type="text/javascript"></script>
+    <script defer src="js/helper.js" type="text/javascript"></script>
     <script defer src="js/app.js" type="text/javascript"></script>
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
@@ -13,7 +14,11 @@
 </head>
 <body>
     <div class="container">
-      <div class = "select-num">
+      <div class = "nav">
+        <button id = "back" class = " nav-btn" disabled> &laquo;返回</button>
+        <button id = "history" class = " nav-btn">查看中奖名单</button>
+      </div>
+      <div id = "select" class = "select-num">
         <h1 class = "header">选择中奖人数</h1>
         <ul class = "number-list">
           <li id = "1" class = "card"><span class = "gradient-text">1</span></li>
@@ -24,7 +29,7 @@
           <li id = "n" class = "card"><span class = "gradient-text">自定义</span></li>
         </ul>
       </div>
-      <div class="login-popup hide">
+      <div id = "custom-popup" class="popup-mask hide">
         <div class="form-popup" id="popupForm">
           <form class="form-container">
             <h2>输入中奖人数</h2>
@@ -37,14 +42,28 @@
           </form>
         </div>
       </div>
+      <div id = "winner-popup" class = "popup-mask hide">
+        <div class = "popup">
+          <div id = "text" class = "text-container">
+            <p>未开始抽奖</p>
+          </div>
+          <div class = "winner-pp-btns">
+            <div>
+            <button type="button" class="btn" onclick = "handleDownloadHistory()">下载名单</button>
+          </div>
+            <div>
+                <button type="button" style="width:100px"class="btn cancel" onclick="handleCloseHistory()">关闭名单</button>
+                <button type="button" style="width:100px"class="btn cancel" onclick="handleBackToMain()">返回首页</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id = "lotto" class = "hide">
+        
         <button id = "lotto-btn">开始抽奖</button>
         <ul id = "machines"></ul>
         <div id = "congrats"></div>
       </div>
-
-        
-
     </div>
 </body>
 </html>
